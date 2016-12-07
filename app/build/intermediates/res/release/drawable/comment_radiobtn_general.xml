@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="false" android:drawable="@color/white" />
+    <item android:state_checked="true" android:drawable="@color/general_radiobtn"/>
+
+</selector><!-- From: file:/D:/A_Star_Project/MstarStoreAppStudio/app/src/main/res/drawable/comment_radiobtn_general.xml -->

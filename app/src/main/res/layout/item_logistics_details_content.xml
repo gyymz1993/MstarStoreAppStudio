@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/left_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/contactitem_catalog"
+            android:gravity="center"
+            android:background="@null"
+            android:textColor="#666"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="2008-8-13" />
+        <TextView
+            android:id="@+id/top_line_view"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#888"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logistics_imageView"
+            android:scaleType="center"
+            android:src="@drawable/logistics_icon_point_grey" />
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/bottom_line_view"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#888"/>
+        <TextView
+            android:gravity="center"
+            android:background="#EEEEEE"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            android:padding="8dp"
+            android:text="08-08-13" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/logistics_text_gray"
+        android:layout_toRightOf="@+id/left_layout"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/white"/>
+
+
+
+
+
+
+</LinearLayout>

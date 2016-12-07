@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/coupon_item_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent"
+        android:src="@drawable/coupons_yellow" />
+
+    <TextView
+        android:id="@+id/coupon_yuan_char"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/coupon_item_bg"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/coupon_item_bg"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="47dp"
+        android:text="@string/yuan_char"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/coupon_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/coupon_yuan_char"
+        android:layout_marginBottom="-10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/coupon_yuan_char"
+        android:text="200"
+        android:textColor="@color/white"
+        android:textSize="65sp" />
+
+    <LinearLayout
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/coupon_item_bg"
+        android:layout_alignTop="@+id/coupon_num"
+        android:layout_marginTop="25dp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <cn.mstar.store.customviews.TextViewWithUnderLine
+            android:id="@+id/coupon_com_name"
+            underlineWidth="6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="范儿珠宝旗舰店"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/coupon_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="满1000可用"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/use_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/coupon_item_bg"
+        android:layout_alignLeft="@+id/coupon_item_bg"
+        android:layout_marginBottom="13dp"
+        android:layout_marginLeft="12dp"
+        android:text="使用期限："
+        android:textColor="@color/color_black_st" />
+
+    <TextView
+        android:id="@+id/coupon_use_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/use_range"
+        android:layout_toRightOf="@+id/use_range"
+        android:text="2015-07-01~2015-07-20"
+        android:textColor="@color/color_black_st" />
+
+    <TextView
+        android:id="@+id/coupon_use_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/use_range"
+        android:layout_alignRight="@+id/coupon_item_bg"
+        android:layout_marginRight="10dp"
+        android:text="未使用"
+        android:textColor="@color/color_black_st" />
+
+</RelativeLayout>

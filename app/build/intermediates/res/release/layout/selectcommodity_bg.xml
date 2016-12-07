@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:padding="20px"
+        android:text="玫瑰金 约2.1g约46cm"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/btn_down"/>
+
+</RelativeLayout><!-- From: file:/D:/A_Star_Project/MstarStoreAppStudio/app/src/main/res/layout/selectcommodity_bg.xml -->

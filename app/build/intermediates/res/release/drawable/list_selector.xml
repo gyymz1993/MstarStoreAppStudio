@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/transparent" android:state_selected="false" />
+    <item android:drawable="@color/gray" android:state_selected="true" />
+    <item android:drawable="@color/transparent" />
+</selector><!-- From: file:/D:/A_Star_Project/MstarStoreAppStudio/app/src/main/res/drawable/list_selector.xml -->

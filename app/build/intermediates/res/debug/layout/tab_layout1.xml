@@ -1,0 +1,295 @@
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/main_tab_group"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/bottom_nav_background"
+            android:orientation="horizontal"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            tools:ignore="UselessParent">
+
+            <FrameLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@null">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom|center"
+                    android:visibility="gone">
+
+                    <RadioButton
+                        android:id="@+id/radio_home"
+                        style="@style/main_tab_bottom"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:clickable="true"
+                        android:drawableTop="@drawable/bt_menu_home_select"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="4dp"
+                        android:text="@string/home" />
+                </LinearLayout>
+
+                <cn.mstar.store.view.CheckedLinearlayout
+                    android:id="@+id/home"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="blocksDescendants"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-10dp"
+                        android:layout_marginTop="-8dp"
+                        android:button="@drawable/bt_menu_home_select"
+                        android:clickable="false" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:text="@string/home"
+                        android:textColor="@drawable/tab_text_indicator"
+                        android:textSize="12sp" />
+                </cn.mstar.store.view.CheckedLinearlayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="top|right|center"
+                    android:orientation="vertical"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="4dip"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/main_tab_unread_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@android:color/white"
+                        android:textSize="10.0dip"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <RadioButton
+                android:id="@+id/radio_classification"
+                style="@style/main_tab_bottom"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:clickable="true"
+                android:drawableTop="@drawable/bt_menu_classification"
+                android:gravity="center_horizontal"
+                android:paddingBottom="4dp"
+                android:text="@string/categories"
+                android:visibility="gone" />
+
+            <cn.mstar.store.view.CheckedLinearlayout
+                android:id="@+id/category"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:descendantFocusability="blocksDescendants"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-10dp"
+                    android:layout_marginTop="-8dp"
+                    android:button="@drawable/bt_menu_classification"
+                    android:clickable="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:text="@string/categories"
+                    android:textColor="@drawable/tab_text_indicator"
+                    android:textSize="12sp" />
+            </cn.mstar.store.view.CheckedLinearlayout>
+
+            <FrameLayout
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@null">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom|center"
+                    android:visibility="gone">
+
+                    <RadioButton
+                        android:id="@+id/radio_shopping_cart"
+                        style="@style/main_tab_bottom"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:button="@null"
+                        android:clickable="true"
+                        android:drawableTop="@drawable/bt_menu_more_select"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="4dp"
+                        android:text="@string/shoppingcart"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <cn.mstar.store.view.CheckedLinearlayout
+                    android:id="@+id/shoppingcart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-10dp"
+                        android:layout_marginTop="-8dp"
+                        android:button="@drawable/bt_menu_more_select"
+                        android:clickable="false"
+                        android:descendantFocusability="blocksDescendants" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:text="@string/shoppingcart"
+                        android:textColor="@drawable/tab_text_indicator"
+                        android:textSize="12sp" />
+                </cn.mstar.store.view.CheckedLinearlayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="top|right|center"
+                    android:paddingRight="10.0dip">
+
+                    <TextView
+                        android:id="@+id/shopping_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dip"
+                        android:gravity="center"
+                        android:textColor="@color/red"
+                        tools:text="11"
+                        android:visibility="invisible"
+                        android:textSize="10.0dip"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@null">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom|center"
+                    android:visibility="gone">
+
+                    <RadioButton
+                        android:id="@+id/radio_me"
+                        style="@style/main_tab_bottom"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:clickable="true"
+                        android:drawableTop="@drawable/bt_menu_me_select"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="4dp"
+                        android:text="@string/me" />
+                </LinearLayout>
+
+                <cn.mstar.store.view.CheckedLinearlayout
+                    android:id="@+id/mycenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="blocksDescendants"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-10dp"
+                        android:layout_marginTop="-8dp"
+                        android:button="@drawable/bt_menu_me_select"
+                        android:clickable="false" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:text="@string/me"
+                        android:textColor="@drawable/tab_text_indicator"
+                        android:textSize="12sp" />
+                </cn.mstar.store.view.CheckedLinearlayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="top|right|center"
+                    android:paddingRight="10.0dip">
+
+                    <TextView
+                        android:id="@+id/main_tab_setting_new_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="6.0dip"
+                        android:paddingRight="6.0dip"
+                        android:text="2"
+                        android:textColor="@android:color/white"
+                        android:textSize="10.0dip"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</TabHost><!-- From: file:/D:/A_Star_Project/MstarStoreAppStudio/app/src/main/res/layout/tab_layout1.xml -->

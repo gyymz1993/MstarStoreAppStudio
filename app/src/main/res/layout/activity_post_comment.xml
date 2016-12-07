@@ -1,0 +1,359 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="cn.mstar.store.ownee.activity.PostCommentActivity">
+
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:id="@+id/title_layout"
+        layout="@layout/title_layout" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_layout"
+        android:layout_weight="1"
+        android:id="@+id/scrollView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <!-- top view-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:background="#fff"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/comment_product_img"
+                    android:src="@drawable/homepage_bracelet_01"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/comment_product_img">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="分期0首付 千禧之心 黄金手链 女款"
+                        android:id="@+id/product_name"
+                        android:textSize="13sp"
+                        android:textColor="#101010"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="金类：千足金"
+                        android:id="@+id/product_norms"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/product_name" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="金重:2.24g"
+                        android:id="@+id/weight_textview"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12sp"
+                        android:layout_toRightOf="@+id/product_norms"
+                        android:layout_below="@+id/product_name"
+                        android:layout_marginStart="21dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!-- top view -->
+
+            <!--radio group-->
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
+
+
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/ck_good"
+                        android:layout_width="wrap_content"
+                        android:button="@null"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dip"
+                        android:paddingTop="2dip"
+                        android:paddingBottom="2dip"
+                        android:text="好评"
+                        android:textColor="#DE6B69"
+                        android:drawableLeft="@drawable/icon_good"
+                        android:drawablePadding="5dp"
+                        android:background="@drawable/comment_radiobtn_good"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="wrap_content"
+                        android:checked="false" />
+
+                    <RadioButton
+                        android:id="@+id/ck_fair"
+                        android:layout_width="wrap_content"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/icon_fair"
+                        android:drawablePadding="5dp"
+                        android:paddingRight="10dip"
+                        android:paddingTop="2dip"
+                        android:paddingBottom="2dip"
+                        android:text="中评"
+                        android:background="@drawable/comment_radiobtn_general"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingLeft="10dp"
+                        android:textColor="#D88D41"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:id="@+id/ck_bad"
+                        android:layout_width="wrap_content"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/icon_bad"
+                        android:text="差评"
+                        android:paddingRight="10dip"
+                        android:paddingTop="2dip"
+                        android:paddingBottom="2dip"
+                        android:background="@drawable/comment_radiobtn_bad"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingLeft="10dp"
+                        android:textColor="#C8C8C8"
+                        android:layout_height="wrap_content"
+                        android:checked="false" />
+
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+            <!-- Relativelayout text area -->
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:minHeight="100dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/editext"
+                            android:layout_width="100dp"
+                            android:layout_weight="1"
+                            android:textSize="10sp"
+                            android:background="@drawable/text_area_background"
+                            android:hint="亲，爱要大声的说出来，对其他顾客有很大的帮助哦~~"
+                            android:textColorHint="#E5E3E3"
+                            android:padding="8dip"
+                            android:maxLines="2"
+                            android:textColor="@color/gray"
+                            android:layout_height="50dp"
+                            />
+
+                            <ImageView
+                                android:id="@+id/btn_camera"
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:src="@drawable/btn_camera"
+                                android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+                <cn.mstar.store.customviews.GridViewForScrollView
+                    android:background="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:stretchMode="columnWidth"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="15dip"
+                    android:layout_marginBottom="10dp"
+                    android:verticalSpacing="5dp"
+                    android:id="@+id/comment_gridView"
+                    android:listSelector="@null"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:padding="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="店铺评价"
+                    android:id="@+id/shop_review_TV" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="商品评分 "
+                        android:textSize="20sp"
+                        android:id="@+id/shop_rating_TV" />
+
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/shop_ratingBar"
+                        style="@style/roomRatingBar"
+                        android:numStars="5"
+                        android:rating="5"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="服务评分 "
+                        android:textSize="20sp"
+                        android:id="@+id/service_rating_TV" />
+
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/service_ratingBar"
+                        style="@style/roomRatingBar"
+                        android:numStars="5"
+                        android:rating="5"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="发货速度 "
+                        android:textSize="20sp"
+                        android:id="@+id/deliver_rating_TV" />
+
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/deliver_ratingBar"
+                        style="@style/roomRatingBar"
+                        android:numStars="5"
+                        android:rating="5"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#fff">
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scrollView2"
+        android:background="@color/white"
+        android:gravity="bottom|right"
+        android:layout_marginTop="20dp"
+        >
+
+        <Button
+            android:id="@+id/bt_send_comment"
+            android:layout_below="@+id/tv_forget_pwd"
+            android:layout_width="100dp"
+            android:text="@string/send_comment"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_login_background_go"
+            android:textSize="15sp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>
